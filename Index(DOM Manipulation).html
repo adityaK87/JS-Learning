@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body id="body ">
+    <!-- <ul id="element" data="valid">
+        <li class="list-item">First Element</li>
+        <li class="list-item">Second Element</li>
+        <li class="list-item">Third Element</li>
+    </ul> -->
+    <!-- <div class="allDivs" id="firstDiv"></div>first Div</div>
+    <script>
+        const first_div = document.getElementsByClassName("allDivs")
+        // console.log(first_div) -->
+    </script>
+    <!-- <div class="allDivs">Second Div</div>
+    <table>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>four</td>
+        </tr>
+        </thead>
+    </table> -->
+
+<button id="clickBtn" onclick=""><i>Click Me</i> </button>
+    <script>
+        // Root Node
+        // console.log(document.documentElement);
+        // console.log(document.head);
+        // console.log(document.body);
+
+        // childrens
+        //    console.log(document.body.childNodes);   //with comments and text nodes(indentation);
+        //    console.log(document.body.children);    //without comments and text nodes(indentation);
+
+        // for (node of document.body.children) {
+        //     console.log(node)
+        // }
+        //console.log(document.body.firstChild);   //with comments and text nodes(indentation);
+        //console.log(document.body.lastChild);    //with comments and text nodes(indentation);
+
+        //console.log(document.body.firstElementChild)  //to access first child the body
+        //console.log(document.body.lastElementChild)   //to access last child the body
+
+        // const childrenOfBody = Array.from(document.body.children)
+        // console.log(childrenOfBody);
+
+
+
+    // siblings
+    // const ulTag=document.body.children[0]
+    // const firstLi=ulTag.children[0]
+    // const secondLi=ulTag.children[1] 
+    // console.log(secondLi.previousElementSibling.textContent)
+    // console.log(ulTag.nextElementSibling);
+
+
+
+    // Table DOM Manipulation
+    // const tableTag=document.body.children[1]
+    // console.log(tableTag.tBodies[0].rows[0].cells[1].textContent);
+    // console.log(tableTag.tBodies[0].rows[0].cells[1].style='background-color:blue;');
+    // console.log(tableTag.rows);
+
+
+    // ID search
+    // element.style.background="red"
+
+    // const ulTag=document.getElementById("element")
+    // ulTag.style.backgroundColor="blue"
+    // console.log()
+
+    // CLASS search
+    // item=document.getElementsByClassName("list-item")
+    // console.log(item)
+
+
+    // By tagname
+    // console.log(document.getElementsByTagName("table"))
+
+    // Query selector
+    // const list_0Items=document.querySelectorAll('.list-item')
+    // const listItems=document.querySelector('#element')
+    // const listItem=document.querySelectorAll('ul > li:nth-child(1)')
+
+    // console.log(listItem[0].textContent)
+
+    // console.log(first_div)
+
+    // element select by attributes
+    // console.log(element.getAttribute("data"))
+    // console.log(element.setAttribute("order-placed",'pending'))
+    // console.log(element.getAttribute("order-placed"))
+    // console.log(element.removeAttribute("order-placed"))
+    // console.log(element.hasAttribute("order-placed"))
+    // console.log(element.attributes)
+
+
+
+    // creating and removing the node elements
+    const newDiv=document.createElement('div')
+    newDiv.textContent="Namaste World"
+    newDiv.innerHTML=`<ul id="element" data="valid">
+        <li class="list-item">First Element</li>
+        <li class="list-item">Second Element</li>
+        <li class="list-item">Third Element</li>
+    </ul>`
+    // const  newText=document.createTextNode('Namaste World')
+    // newDiv.appendChild(newText)
+    document.body.append(newDiv)
+    // document.body.prepend(newDiv)
+    // document.body.after(newDiv)
+    // document.body.before(newDiv)
+    // firstDiv.replaceWith(newDiv)
+    // firstDiv.remove()
+
+    // Events
+    //  function callMe(){
+    //     alert("Thanks for clicking me")
+    // }
+    // clickBtn.onclick=callMe
+
+
+
+    function callMe(event){
+        console.log(event.type)
+        console.log(event.currentTarget)
+        console.log(event.clientY)
+        console.log(event.clientX)
+        alert("Thanks for Clicking me")
+    }
+    // clickBtn.onclick=callMe
+
+    clickBtn.addEventListener('click',callMe)
+    // clickBtn.addEventListener('click',function(){
+    //     alert('Thanks')
+    // })
+    // clickBtn.removeEventListener('click',callMe)
+
+    // clickBtn.removeEventListener('click',function(){
+    //     alert('Thanks')
+    // })
+    </script>
+</body>
+
+</html>
