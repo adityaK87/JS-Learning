@@ -22,6 +22,7 @@ console.log(selectBooks);
 //function
 function namasteWorld(name, lastName) {
   console.log("Namaste " + name + " " + lastName);
+  console.log(`Namaste ${name}  ${lastName}`);
 }
 namasteWorld("Gaurav", "Pal");
 namasteWorld("Aman", "Rathore");
