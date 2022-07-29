@@ -15,12 +15,16 @@
 
 */
 
+// A callback is a function passed as an argument to another function.
+// This technique allows a function to call another function. 
+// A callback function can run after another function has finished.
+
 
 function Resister(Callback) {
     setTimeout(() => {
         console.log("Resister end")
         Callback()
-    }, 10000)
+    }, 1000)
 }
 
 function SendWelcomeEmail(Callback) {
@@ -61,6 +65,7 @@ Resister(function () {
             GetUserData(function () {
 
                 DisplayUserData();
+
             });
 
         });
