@@ -29,7 +29,7 @@ async function async1(){
 
 
 
-Example-2
+// Example-2
 
 const p1 = Promise.resolve(1)
 const p2 = new Promise((resolve) => resolve(p1))
@@ -82,7 +82,7 @@ Promise.resolve(1)
 .then(console.log)
 
 
-Example--5
+// Example--5
 
 Promise.resolve(1)
 .then((val) => {
@@ -109,7 +109,7 @@ Promise.resolve(1)
 })
 
 
-Example-6
+// Example-6
 
 Promise.resolve(1)
 .finally((data) => {
