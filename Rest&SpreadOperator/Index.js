@@ -102,6 +102,6 @@ const newuser = {
     street: "main Street",
 };
 
-const { Name , ...address } = newuser;
-console.log(Name ,address)
+const { Name, ...address } = newuser;
+console.log(Name, address)
 
