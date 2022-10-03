@@ -15,8 +15,8 @@
 
 */
 
-// A callback is a function passed as an argument to another function.
-// This technique allows a function to call another function. 
+// A callback is a function passed as an argument to  another function.
+// This technique allows a function to call into another function. 
 // A callback function can run after another function has finished.
 
 
@@ -75,4 +75,4 @@ Resister(function () {
 });
 
 
-console.log("Other application Work")
+console.log("Other application Work");
