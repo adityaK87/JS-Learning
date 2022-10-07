@@ -230,9 +230,11 @@ for (let i = 1; i < 5; i++) {
 
 
 // question 21
-const foo = () => console.log('First');
-const bar = () => setTimeout(() => console.log('Second'));
-const baz = () => console.log('Third');
-bar();
-foo();
-baz(); // First Third Second
+// const foo = () => console.log('First');
+// const bar = () => setTimeout(() => console.log('Second'));
+// const baz = () => console.log('Third');
+// bar();
+// foo();
+// baz(); // First Third Second
+
+
