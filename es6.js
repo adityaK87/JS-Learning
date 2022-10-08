@@ -143,7 +143,85 @@ function mahi(name) {
     console.log(name)
 }
 
-
+//class are not hoisted
 class Persons { };
 let p1 = new Persons();
 console.log(typeof Persons)
+
+// class methods
+class Members {
+    //constructor method
+    constructor(name) {
+        this.name = name
+        console.log(this.name + " constructor")
+    }
+    //static method
+    static staticMethod() {
+        console.log("static method")
+    }
+    //prototype method
+    greetPerson() {
+        console.log("Hello " + this.name)
+    }
+
+}
+let p = new Members("chandler");
+Members.staticMethod();
+p.greetPerson()
+
+//class inheritence
+class Family {
+    constructor(name) {
+        console.log(name + " Family constructor")
+    }
+    getId() {
+        return 10;
+    }
+}
+
+class People extends Family {
+    constructor() {
+        super(name)
+        console.log(name + " People constructor")
+    }
+    getId() {
+        // return 50;
+        //how to get getId of fmaily
+        return super.getId();
+    }
+
+}
+let fm = new People("chandler ")
+console.log(fm.getId());
+
+// set and map
+
+let mySet = Object.create(null);
+mySet.id = 2;
+
+if (mySet.id) {
+    console.log("id exits")
+}
+
+let myMap = Object.create(null)
+myMap.name = "chandler"
+let val = myMap.name;
+console.log(val)
+
+
+let myId = new Set();
+myId.add("hello")
+myId.add(2)
+myId.add(2)
+console.log(myId.size) // output 2 
+// Set only returns unoque values
+
+
+//Symbols in js 
+let s = Symbol()
+console.log(typeof s)
+
+let s2 = Symbol()
+let s3 = Symbol()
+console.log(s2 === s3) //false
+//because Symbol always creates a unique key
