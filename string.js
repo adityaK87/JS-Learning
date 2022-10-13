@@ -28,7 +28,7 @@ console.log(number.toString());
 console.log(`${hello + welcome} Your score is ${number}`);
 
 // String Method in JavaScript
-let favShow = "Gmae of Thrones";
+let favShow = "Game of Thrones";
 console.log(favShow.length);
 
 console.log(favShow[0]);

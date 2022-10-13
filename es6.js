@@ -224,4 +224,4 @@ console.log(typeof s)
 let s2 = Symbol()
 let s3 = Symbol()
 console.log(s2 === s3) //false
-//because Symbol always creates a unique key
+//because Symbol always creates a unique ID
