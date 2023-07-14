@@ -1,7 +1,7 @@
 // fetch is used to get data over the network
 let promise = fetch(URL)
 promise.then((value) => {
-    value.json
+    value.json()
 }).then((data) => {
     console.log(data)
 })
